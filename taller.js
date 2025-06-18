@@ -117,7 +117,7 @@ function generarReporteIndividual(nombreEstudiante) {
 		let mejor = obtenerMejorCalificacion(estudiante.calificaciones);
 		let peor = obtenerPeorCalificacion(estudiante.calificaciones);
 
-		console.log(`Reporte de el/la estudiante${nombreEstudiante}`);
+		console.log(`Reporte de el/la estudiante ${nombreEstudiante}`);
 		console.log(`- Calificaciones: ${estudiante.calificaciones}`);
 		console.log(`- Promedio: ${promedio}`);
 		console.log(`- Mejor calificación: ${mejor}`);
@@ -148,8 +148,8 @@ function iniciarGestionCalificaciones() {
 
 		switch (opcion) {
 			case "1":
-				estudiantes.forEach((e) =>
-					console.log(`${e.nombre}: ${e.calificaciones}`)
+				estudiantes.forEach((i) =>
+					console.log(`${i.nombre}: ${i.calificaciones}`)
 				);
 				break;
 
@@ -170,9 +170,9 @@ function iniciarGestionCalificaciones() {
 				);
 				let aprobados = filtrarEstudiantesAprobados(minimo);
 				console.log("Estudiantes aprobados:");
-				aprobados.forEach((e) =>
+				aprobados.forEach((i) =>
 					console.log(
-						`${e.nombre}: promedio = ${calcularPromedio(e.calificaciones)}`
+						`${i.nombre}: promedio = ${calcularPromedio(i.calificaciones)}`
 					)
 				);
 				break;
@@ -180,8 +180,8 @@ function iniciarGestionCalificaciones() {
 			case "5":
 				ordenarEstudiantesPorNombre();
 				console.log("Estudiantes ordenados alfabéticamente:");
-				estudiantes.forEach((e) =>
-					console.log(`${e.nombre}: ${e.calificaciones.join(", ")}`)
+				estudiantes.forEach((i) =>
+					console.log(`${i.nombre}: ${i.calificaciones}`)
 				);
 				break;
 
